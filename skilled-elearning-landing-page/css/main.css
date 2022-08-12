@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', Helvetica, sans-serif;
+  color: var(--blue);
+}
+
+:root {
+  /* colors */
+  --blue: #666DA2;
+  --dark-blue: #13183f;
+  --pink: #f74780;
+  --light-pink: #ffa7c3;
+  --white: #ffffff;
+  /* gradients */
+  --body-background: linear-gradient(#ffffff, #f0f0ff);
+  --primary-gradient: linear-gradient(#ff6f47, #f028a7);
+  --light-primary-gradient: linear-gradient(hsl(13, 100%, 79%), hsl(322, 87%, 70%));
+  --secondary-gradient: linear-gradient(hsl(237, 100%, 64%), hsl(322, 87%, 55%));
+  --light-secondary-gradient: linear-gradient(hsl(237, 100%, 79%), hsl(322, 87%, 70%));
+}
+
+body {
+  background: var(--body-background);
+}
+
+nav, footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+heading {
+  display: flex;
+  height: calc(100vh - 75px);
+  max-height: 800px;
+}
+
+.hero-text {
+  width: 50%;
+}
+
+main, footer .wrapper {
+  max-width: 1400px;
+  padding: 0 100px 0 100px;
+  margin: auto;
+}
+
+.hero-text {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.hero-text .btn {
+  align-self: flex-start;
+  margin: 50px 0 50px 0;
+  height: 50px;
+}
+
+.hero-text h1 {
+  font-size: 46px;
+  margin: 30px 0 30px 0;
+  color: var(--dark-blue);
+}
+
+.dark-blue-bg {
+  background: var(--dark-blue);
+}
+
+.sec-grad-bg {
+  background: var(--secondary-gradient);
+}
+
+.pri-grad-bg {
+  background: var(--primary-gradient);
+}
+
+.btn.pri-grad-bg:hover {
+  background: var(--light-primary-gradient);
+  cursor: pointer;
+}
+
+.btn.sec-grad-bg:hover {
+  background: var(--light-secondary-gradient);
+  cursor: pointer;
+}
+
+.btn.dark-blue-bg:hover {
+  color: var(--dark-blue);
+  background: var(--blue);
+  cursor: pointer;
+}
+
+button.btn {
+  border: none;
+  border-radius: 25px;
+  height: 40px;
+  padding: 5px;
+  min-width: 125px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+nav {
+  z-index: 1;
+  position: relative;
+}
+nav.btn {
+  z-index: 5;
+}
+
+.hero-image {
+  background: url(../images/image-hero-desktop.png);
+  background-position: bottom left;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  max-height: inherit;
+  background-repeat: no-repeat;
+}
+
+.course-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 50px;
+  margin: 50px 0 50px 0;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 10px;
+  min-height: 100px;
+  min-width: 100px;
+  padding: 0 20px 20px 20px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.highlight {
+  background: var(--primary-gradient);
+  color: var(--white);
+}
+
+.highlight h2 {
+  color: var(--white);
+  margin: 50px 0 50px 0;
+}
+
+.card .icon {
+  position: relative;
+}
+
+.card h3 {
+  color: var(--dark-blue);
+}
+
+.card p {
+  margin: 20px 0 20px 0;
+}
+
+.card .link {
+  color: var(--pink);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: auto;
+  justify-self: flex-end;
+}
+
+.card .link:hover {
+  color: var(--light-pink);
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  top: -25px;
+}
+
+.icon.icon-animation {
+  content: url(../images/icon-animation.svg);
+}
+
+.icon.icon-business {
+  content: url(../images/icon-business.svg);
+}
+
+.icon.icon-crypto {
+  content: url(../images/icon-crypto.svg);
+}
+
+.icon.icon-design {
+  content: url(../images/icon-design.svg);
+}
+
+.icon.icon-photography {
+  content: url(../images/icon-photography.svg);
+}
+
+@media screen and (max-width: 1200px) {
+  main, footer .wrapper {
+    padding: 0 20px 0 20px;
+  }
+
+  .hero-image {
+    background: url(../images/image-hero-tablet.png);
+    background-position: bottom left;
+  }
+
+}
+
+@media screen and (max-width: 920px) {  
+  .course-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 30px;
+  }
+
+  .hero-text {
+    width: 35%;
+  }
+
+  .hero-image {
+    width: 65%;
+  }
+
+  main, footer .wrapper {
+    margin: unset;
+  }
+
+  .logo {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero-text {
+    width: inherit;
+    min-height: 350px;
+  }
+
+  .hero-text h1 { 
+    font-size: 32px;
+  }
+
+  heading {
+    display: block;
+    height: unset;
+  }
+
+  .hero-text .btn {
+    margin-bottom: unset;
+  }
+
+  .hero-image {
+    position: static;
+    background: url(../images/image-hero-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+  }
+
+  .course-cards {
+    grid-template-columns: 1fr;
+  }
+}

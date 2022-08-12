@@ -1,0 +1,133 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  /*### Primary*/
+  --Orange: hsl(25, 97%, 53%);
+  /*### Neutral*/
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --MediumGrey: hsl(216, 12%, 54%);
+  --HardGrey: #363f48;
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+
+}
+
+body {
+  background-color: var(--VeryDarkBlue);
+  color: var(--LightGrey);
+  font-size: 15px;
+  font-family: 'Overpass', sans-serif;
+}
+
+header h1 {
+  color: var(--VeryDarkBlue);
+}
+
+.rating-state, .thank-you-state {
+  background: var(--DarkBlue);
+  width: 375px;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 100px auto 50px auto;
+  margin-top: 50px;
+  padding: 25px;
+  border-radius: 30px;
+  line-height: 27px;
+}
+
+.thank-you-state {
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  color: var(--White);
+  margin: 15px 0 15px 0;
+}
+
+.btn.submit {
+  background-color: var(--Orange);
+  height: 40px;
+  color: var(--White);
+  font-family: 'Overpass';
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: 2px;
+}
+
+.btn.submit:hover {
+  background: var(--White);
+  color: var(--Orange);
+  cursor: pointer;
+  transition: linear 0.1s;
+}
+
+.rating {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 30px 0;
+}
+.rating .rate {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  color: var(--MediumGrey);
+  background-color: var(--HardGrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rate:hover {
+  cursor: pointer;
+  color: var(--White);
+  background-color: var(--MediumGrey);
+  font-weight: 700;
+  transition: linear 0.2s;
+}
+
+.rate.selected {
+  font-weight: 700;
+  background-color: var(--Orange);
+  color: var(--White);
+}
+
+.star {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background-color: var(--HardGrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  color: var(--Orange);
+  background-color: var(--HardGrey);
+  margin: 20px auto 10px auto;
+  padding: 2px 20px 0 20px;
+  border-radius: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .rating-state, .thank-you-state {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

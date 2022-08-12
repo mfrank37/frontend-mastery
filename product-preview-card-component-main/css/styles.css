@@ -1,0 +1,135 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+:root {
+  --DarkCyan: hsl(158, 36%, 37%);
+  --DarkerCyan: hsl(158, 36%, 20%);
+  --Cream: hsl(30, 38%, 92%);
+  --VeryDarkblue: hsl(212, 21%, 14%);
+  --DarkGreyishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  color: var(--DarkGreyishBlue);
+  background-color: var(--Cream);
+  font-family: 'Montserrat';
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.card {
+  max-width: 620px;
+  min-height: 450px;
+  margin: auto;
+  margin-bottom: 75px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+}
+
+.card > * {
+  width: 50%;
+}
+
+.card .details {
+  border-radius: 0 10px 10px 0;
+  background-color: var(--White);
+  padding: 25px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.card .description {
+  line-height: 25px;
+}
+
+.image-wrapper {
+  border-radius: 10px 0 0 10px;
+  width: 50%;
+  background-image: url(../images/image-product-desktop.jpg);
+  background-size: 100% auto;
+  background-position: center center;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price s {
+  margin: auto;
+}
+
+.price .current {
+  font-family: 'Fraunces';
+  font-size: 36px;
+  color: var(--DarkCyan);
+}
+
+.details > h1 {
+  color: black;
+  font-family: 'Fraunces';
+  font-size: 36px;
+  line-height: 100%;
+}
+
+.title {
+  letter-spacing: 10px;
+}
+
+.add-to-card {
+  color: var(--White);
+  background-color: var(--DarkCyan);
+  border: unset;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-weight: 700;
+  height: 40px;
+  cursor: pointer;
+}
+
+.add-to-card::before {
+  content: url(../images/icon-cart.svg);
+}
+
+.add-to-card:hover, .add-to-card:focus {
+  background: var(--DarkerCyan);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    max-width: 400px;
+    width: 90%;
+  }
+
+  .details > h1, .price .current {
+    font-size: 32px;
+  }
+
+  .card > * {
+    min-height: 250px;
+    width: 100%;
+  }
+
+  .card .details {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .image-wrapper {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card .details {
+    min-height: 400px;
+  }
+}
