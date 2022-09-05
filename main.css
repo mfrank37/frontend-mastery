@@ -28,7 +28,14 @@ a {
   text-decoration-color: var(--green);
 }
 
-a::after {
+li a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+}
+
+a > i {
   content: url(link-icon.svg);
 }
 
