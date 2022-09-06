@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --stats-heading: hsla(0, 0%, 100%, 0.6);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --white: hsl(0, 0%, 100%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --very-dark-blue: hsl(233, 47%, 7%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--main-paragraph);
+  background-color: var(--very-dark-blue);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.card {
+  overflow: auto;
+  background-color: var(--dark-desaturated-blue);
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-between;
+  border-radius: 10px;
+  width: 950px;
+  min-height: 370px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-figure {
+  width: 445px;
+  background: url(../images/image-header-desktop.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card-figure .overlay {
+  background-color: var(--soft-violet);
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+
+.card-details {
+  max-width: 460px;
+  align-self: center;
+  padding: 0 40px 0 40px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 50px;
+}
+
+.stats > * {
+  width: 1fr;
+}
+
+h1 {
+  font-size: 36px;
+  color: var(--white);
+}
+
+h1 span {
+  color: var(--soft-violet);
+}
+
+.stats b {
+  font-size: 24px;
+  font-family: 'Lexend Deca', Verdana, Geneva, Tahoma, sans-serif;
+  font-variant-caps: all-petite-caps;
+  color: var(--white);
+}
+
+.stats p {
+  margin: unset;
+  font-variant-caps: petite-caps;
+  color: var(--stats-heading);
+}
+
+@media only screen and (max-width: 950px) {
+  .card {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .card-figure {
+    background: url(../images/image-header-mobile.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 235px;
+    max-width: 320px;
+  }
+
+  .card-details {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .stats {
+    display: flex;
+    flex-flow: column;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    gap: 20px;
+  }
+}
