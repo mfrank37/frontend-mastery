@@ -22,18 +22,22 @@ body {
   font-weight: 500;
   background: url(../images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
+  background-size: contain;
   margin: 0;
   padding: 0;
   position: absolute;
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
   max-width: 450px;
   background-color: var(--white);
   border-radius: 15px;
-  margin: auto;
-  margin-top: 30px;
 }
 
 .card .details {
@@ -127,7 +131,6 @@ b {
 
 footer {
   margin-top: 30px;
-  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 425px) {
