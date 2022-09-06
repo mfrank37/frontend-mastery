@@ -1,0 +1,154 @@
+* {
+  font-family: 'Red Hat Display', 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --white: hsl(0, 100%, 100%);
+}
+html {
+  background-color: var(--pale-blue);
+}
+
+body {
+  text-align: center;
+  font-size: 16px;
+  color: var(--desaturated-blue);
+  font-weight: 500;
+  background: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.card {
+  max-width: 450px;
+  background-color: var(--white);
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.card .details {
+  max-width: 350px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+button {
+  height: 50px;
+  border-radius: 15px;
+  border: unset;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+button.proceed {
+  background-color: var(--bright-blue);
+  color: var(--white);
+  box-shadow: 0 15px 30px 0 #B4AFF4;
+}
+
+button.proceed:hover {
+  background-color: #766CEA;
+}
+
+button.cancel {
+  background: unset;
+  color: var(--desaturated-blue);
+}
+
+button.cancel:hover {
+  color: var(--dark-blue);
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background-color: var(--very-pale-blue);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 25px auto 25px auto;
+  gap: 15px;
+}
+
+.pricing > * {
+  height: fit-content;
+  width: fit-content;
+}
+
+.pricing p {
+  margin: unset;
+}
+
+.pricing button.cta {
+  margin-left: auto;
+  margin-top: unset;
+  background: unset;
+  color: var(--bright-blue);
+  text-decoration: underline;
+  width: fit-content;
+}
+
+.pricing button.cta:hover {
+  color: #766CEA;
+}
+
+h1, b {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+h1 {
+  font-size: 28px;
+}
+
+b {
+  font-size: 16px;
+}
+
+footer {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    background: url(../images/pattern-background-mobile.svg);
+  }
+
+  .card {
+    max-width: 335px;
+  }
+
+  .card .details {
+    max-width: 275px;
+  }
+
+  .pricing {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
