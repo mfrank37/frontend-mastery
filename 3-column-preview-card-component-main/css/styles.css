@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  font-family: 'Lexend Deca', Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-light-gray);
+}
+
+h1, h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  color: var(--very-light-gray);
+}
+
+h1 {
+  font-size: 10px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.card {
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-item {
+  padding: 55px;
+  color: var(--transparent-white);
+  width: 320px;
+}
+
+.card p {
+  height: 150px;
+}
+
+.card button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  font-family: 'Lexend Deca', Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  border: unset;
+  cursor: pointer;
+  margin-top: auto;
+  background-color: var(--very-light-gray);
+}
+
+.card button:hover {
+  color: var(--transparent-white);
+  border: solid 2px var(--very-light-gray);
+  background-color: unset;
+  transition: linear 0.1s;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+}
+
+.sedans button {
+  color: var(--bright-orange);
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.suvs button {
+  color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.luxury button {
+  color: var(--very-dark-cyan);
+}
+
+@media only screen and (max-width: 400px) {
+  .card-item {
+    padding: 55px;
+    color: var(--transparent-white);
+    width: 280px;
+  }
+
+  .card-item {
+    padding: 35px;
+  }
+}
