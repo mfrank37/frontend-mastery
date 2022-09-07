@@ -63,6 +63,7 @@ h2 {
 
 .card p {
   height: 150px;
+  line-height: 150%;
 }
 
 .card button {
@@ -117,5 +118,10 @@ h2 {
 
   .card-item {
     padding: 35px;
+  }
+
+  .card p {
+    height: fit-content;
+    margin-bottom: 10px;
   }
 }
