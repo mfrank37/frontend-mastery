@@ -32,6 +32,7 @@ h1, h2 {
   font-family: 'Big Shoulders Display', cursive;
   font-weight: 700;
   color: var(--very-light-gray);
+  text-transform: uppercase;
 }
 
 h1 {
