@@ -13,7 +13,7 @@ A basic E-learning landing page.
 
 ![Desktop Preview](./screenshot/Skilled-E-learning-landing-page.png)
 
-Also a [Live Preview](https://mfrank37.github.io/skilled-elearning-landing-page/) is available.
+Also a [Live Preview](https://mfrank37.github.io/frontend-mastery/skilled-elearning-landing-page/) is available.
 
 ## Author
 

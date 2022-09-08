@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/mfrank37/frontend-mastery/tree/master/nft-preview-card-component-main)
-- Live Site URL: [Github Pages](https://mfrank37.github.io/interactive-rating-component-main/nft-preview-card-component-main)
+- Live Site URL: [Github Pages](https://mfrank37.github.io/frontend-mastery/nft-preview-card-component-main)
 
 ## My process
 

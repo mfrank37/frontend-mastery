@@ -26,6 +26,11 @@ Users should be able to:
 ![screenshot](./screenshot/screenshot.png)
 ![screenshot1](./screenshot/screenshot1.png)
 
+### Links
+
+- Solution URL: [Github](https://github.com/mfrank37/frontend-mastery/tree/master/interactive-rating-component-main)
+- Live Site URL: [Github Pages](https://mfrank37.github.io/frontend-mastery/interactive-rating-component-main)
+
 ### Built with
 
 - Semantic HTML5 markup

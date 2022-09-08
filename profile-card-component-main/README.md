@@ -25,7 +25,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 ### Links
 
 - Solution URL: [Github](https://github.com/mfrank37/frontend-mastery/tree/master/profile-card-component-main)
-- Live Site URL: [Github Pages](https://mfrank37.github.io/interactive-rating-component-main/profile-card-component-main)
+- Live Site URL: [Github Pages](https://mfrank37.github.io/frontend-mastery/profile-card-component-main)
 
 ## My process
 

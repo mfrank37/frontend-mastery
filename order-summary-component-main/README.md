@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/mfrank37/frontend-mastery/tree/master/order-summary-component-main)
-- Live Site URL: [Github Pages](https://mfrank37.github.io/interactive-rating-component-main/order-summary-component-main)
+- Live Site URL: [Github Pages](https://mfrank37.github.io/frontend-mastery/order-summary-component-main)
 
 ## My process
 

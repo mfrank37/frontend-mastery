@@ -23,12 +23,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot/screenshot.png)
+![./screenshot/screenshot.png](./screenshot/screenshot.png)
 
 ### Links
 
 - Solution URL: [Solution URL here](https://github.com/mfrank37/product-preview-card-component-main)
-- Live Site URL: [Live site URL here](https://mfrank37.github.io/product-preview-card-component-main/)
+- Live Site URL: [Live site URL here](https://mfrank37.github.io/frontend-mastery/product-preview-card-component-main/)
 
 ## My process
 

@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/mfrank37/frontend-mastery/tree/master/stats-preview-card-component-main)
-- Live Site URL: [Github Pages](https://mfrank37.github.io/interactive-rating-component-main/stats-preview-card-component-main)
+- Live Site URL: [Github Pages](https://mfrank37.github.io/frontend-mastery/stats-preview-card-component-main)
 
 ## My process
 
