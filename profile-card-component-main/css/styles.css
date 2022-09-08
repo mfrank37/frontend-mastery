@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+  background-color: var(--dark-cyan);
+  min-height: 100vh;
+  font-size: 18px;
+  text-align: center;
+  color: var(--very-dark-desaturated-blue);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: var(--dark-cyan);
+}
+
+.bg-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 60%;
+  background: url(../images/bg-pattern-top.svg);
+  background-position: bottom right;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.bg-bottom {
+  z-index: -1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  height: 45%;
+  background: url(../images/bg-pattern-bottom.svg);
+  background-size: 150%;
+  background-repeat: no-repeat;
+}
+
+.card {
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  max-width: fit-content;
+}
+
+.user-bg {
+  height: fit-content;
+}
+
+.card .avatar {
+  position: relative;
+  top: -55px;
+  height: 70px;
+  overflow: visible;
+}
+
+.card .avatar img {
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.user h2 span {
+  font-weight: 400;
+}
+
+.user p {
+  margin: 10px 0 10px 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.user {
+  margin-bottom: 20px;
+}
+
+.stats p {
+  font-size: 12px;
+}
