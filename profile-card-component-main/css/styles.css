@@ -60,6 +60,7 @@ h1 {
   overflow: hidden;
   position: relative;
   max-width: fit-content;
+  box-shadow: 0 30px 50px 0 hsl(185, 75%, 19%);
 }
 
 .user-bg {
@@ -103,4 +104,8 @@ h2 {
 
 .stats p {
   font-size: 12px;
+}
+
+footer, a, a:visited {
+  color: white;
 }
