@@ -2,45 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product preview card component challenge solution. Implementation by Frank Mungeri.">
   <meta name="keywords" content="mfrank37, html, css, css3, challenge, frontend, mentor">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/import.css">
   <link rel="stylesheet" href="./css/styles.css">
   <title>Frontend Mentor | Product preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-<main>
-  <h1 class="hide">Product preview card component</h1>
-  <div class="card">
-    <div class="image-wrapper">
-    </div>
-    <div class="details">
+  <main class="card">
+    <picture>
+      <source media="(max-width: 769px)" srcset="images/image-product-mobile.jpg">
+      <source media="(min-width: 770px)" srcset="images/image-product-desktop.jpg">
+      <img src="images/image-product-desktop.jpg" alt="Image Product">
+    </picture>
+    <article class="details">
       <p class="title">PERFUME</p>
       <h1>Gabrielle Essence Eau De Parfum</h1>
       <p class="description">
-      A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-      Perfumer-Creator for the House of CHANEL.
+        A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.
       </p>
       <div class="price">
         <span class="current">$149.99</span>
-        <s>$169.99</s>
+        <del>$169.99</del>
       </div>
-      <button class="add-to-card"> &nbsp;Add to Cart</button>
-    </div>
-  </div>
-</main>
-<footer>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.frontendmentor.io/profile/mfrank37">mfrank37</a>.
-  </div>
-</footer>
+      <button><i></i>Add to Cart</button>
+    </article>
+  </main>
 </body>
 </html>

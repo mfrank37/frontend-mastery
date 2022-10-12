@@ -1,3 +1,5 @@
+@import url(import.css);
+
 * {
   margin: 0%;
   padding: 0%;
@@ -17,17 +19,16 @@ body {
   color: var(--DarkGreyishBlue);
   background-color: var(--Cream);
   font-family: 'Montserrat';
-}
-
-.hide {
-  visibility: hidden;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .card {
-  max-width: 620px;
-  min-height: 450px;
-  margin: auto;
-  margin-bottom: 75px;
+  width: 600px;
+  height: 450px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: stretch;
@@ -40,22 +41,22 @@ body {
 .card .details {
   border-radius: 0 10px 10px 0;
   background-color: var(--White);
-  padding: 25px;
+  padding: 30px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card .description {
   line-height: 25px;
 }
 
-.image-wrapper {
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   border-radius: 10px 0 0 10px;
-  width: 50%;
-  background-image: url(../images/image-product-desktop.jpg);
-  background-size: 100% auto;
-  background-position: center center;
 }
 
 .price {
@@ -63,7 +64,7 @@ body {
   justify-content: space-between;
 }
 
-.price s {
+.price del {
   margin: auto;
 }
 
@@ -84,32 +85,34 @@ body {
   letter-spacing: 10px;
 }
 
-.add-to-card {
+button {
   color: var(--White);
   background-color: var(--DarkCyan);
   border: unset;
   border-radius: 5px;
   font-family: 'Montserrat';
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
-  height: 40px;
+  height: 50px;
+  vertical-align: middle;
   cursor: pointer;
 }
 
-.add-to-card::before {
+button i {
   content: url(../images/icon-cart.svg);
+  margin-right: 10px;
+  margin-bottom: -2px;
 }
 
-.add-to-card:hover, .add-to-card:focus {
+button:hover, button:focus {
   background: var(--DarkerCyan);
 }
 
 @media screen and (max-width: 768px) {
   .card {
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    max-width: 400px;
-    width: 90%;
+    display: block;
+    max-width: 360px;
+    height: fit-content;
   }
 
   .details > h1, .price .current {
@@ -117,7 +120,6 @@ body {
   }
 
   .card > * {
-    min-height: 250px;
     width: 100%;
   }
 
@@ -125,8 +127,9 @@ body {
     border-radius: 0 0 10px 10px;
   }
 
-  .image-wrapper {
+  img {
     border-radius: 10px 10px 0 0;
+    object-fit: cover;
   }
 
   .card .details {

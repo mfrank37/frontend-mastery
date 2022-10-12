@@ -1,3 +1,5 @@
+@import url(imports.css);
+
 * {
   margin: 0px;
   padding: 0px;
@@ -5,9 +7,9 @@
 }
 
 :root {
-  /*### Primary*/
+  /** Primary*/
   --Orange: hsl(25, 97%, 53%);
-  /*### Neutral*/
+  /** Neutral*/
   --White: hsl(0, 0%, 100%);
   --LightGrey: hsl(217, 12%, 63%);
   --MediumGrey: hsl(216, 12%, 54%);
@@ -22,14 +24,14 @@ body {
   color: var(--LightGrey);
   font-size: 15px;
   font-family: 'Overpass', sans-serif;
-}
-
-header h1 {
-  color: var(--VeryDarkBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .rating-state, .thank-you-state {
-  background: var(--DarkBlue);
+  background: linear-gradient(var(--DarkBlue), hsl(213, 19%, 12%));
   width: 375px;
   display: flex;
   flex-flow: column nowrap;
@@ -45,9 +47,14 @@ header h1 {
   padding: 20px;
 }
 
-h2 {
+h1 {
+  font-size: 28px;
   color: var(--White);
   margin: 15px 0 15px 0;
+}
+
+button {
+  font: inherit;
 }
 
 .btn.submit {
@@ -82,9 +89,6 @@ h2 {
   border-radius: 50%;
   color: var(--MediumGrey);
   background-color: var(--HardGrey);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .rate:hover {

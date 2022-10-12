@@ -8,6 +8,7 @@
 
 :root {
   --dark-green: #001405;
+  --darker-green: #000a03;
   --grey: #C7C9C8;
   --green: #48D967;
   --red: #CF1B30;
@@ -15,9 +16,16 @@
 }
 
 body {
-  background-color: var(--dark-green);
+  background: var(--darker-green);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--darker-green) 5px,
+    var(--dark-green) 50px,
+    var(--darker-green) 55px,
+    var(--dark-green) 80px
+  );
   color: var(--grey);
-  max-width: 800px;
+  max-width: 700px;
   padding: 0 50px 0 50px;
   margin: auto;
   font-family: 'Ubuntu Mono', 'Courier New', Courier, monospace;
@@ -48,10 +56,41 @@ li {
 }
 
 h1 {
-  margin: 50px 0 50px 0;
+  margin: 50px 0 20px 0;
 }
 
 footer {
   background: #000;
   padding: 20px;
+}
+
+header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+header > p {
+  font-style: italic;
+}
+
+main {
+  max-height: calc(100vh - 85px - 150px);
+  min-height: 250px;
+  overflow: auto;
+}
+
+ul {
+  padding-left: 50px;
+  list-style-image: radial-gradient(var(--red), var(--pink));
+}
+
+@media (max-height: 500px) {
+  h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  header {
+    margin-bottom: 30px;
+  }
 }

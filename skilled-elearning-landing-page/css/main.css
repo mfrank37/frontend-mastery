@@ -41,7 +41,7 @@ footer {
   padding-bottom: 20px;
 }
 
-heading {
+header {
   display: flex;
   height: calc(100vh - 75px);
   max-height: 800px;
