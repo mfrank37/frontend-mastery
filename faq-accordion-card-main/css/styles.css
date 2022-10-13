@@ -46,7 +46,7 @@ main > * {
 .qas {
   height: 100%;
   padding: 50px 0;
-  margin-right: 50px;
+  margin-right: 100px;
   overflow: hidden;
 }
 
@@ -64,7 +64,7 @@ h1 {
   width: 1px;
   margin: -1px;
   overflow: hidden;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 h2 {
@@ -72,10 +72,10 @@ h2 {
 }
 
 .qa label {
+  font-size: 15px;
   display: flex;
   margin: 12px 0;
   padding-right: 15px;
-  font-size: 16px;
   font-weight: normal;
   justify-content: space-between;
   align-items: center;
@@ -140,7 +140,7 @@ input:checked + h2>label i {
   display: none;
 }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1000px) {
   main {
     width: 960px;
   }
@@ -150,25 +150,18 @@ input:checked + h2>label i {
   }
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 999px) {
   body {
     display: block;
+    padding-top: 10px;
   }
   main {
-    width: 330px;
+    max-width: 350px;
     padding: 20px;
     flex-flow: column;
     max-width: 350px;
     height: auto;
     margin-top: 110px;
-  }
-
-  .qas p {
-    font-size: 13px;
-  }
-
-  .qa h2 label {
-    font-size: 14px;
   }
 
   main > * {
