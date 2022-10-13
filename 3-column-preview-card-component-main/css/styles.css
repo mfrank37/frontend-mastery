@@ -20,27 +20,17 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  position: absolute;
   display: flex;
-  flex-flow: column;
   justify-content: center;
   align-items: center;
   background-color: var(--very-light-gray);
 }
 
-h1, h2 {
+h2 {
   font-family: 'Big Shoulders Display', cursive;
   font-weight: 700;
   color: var(--very-light-gray);
   text-transform: uppercase;
-}
-
-h1 {
-  font-size: 10px;
-  text-align: center;
-}
-
-h2 {
   font-size: 40px;
 }
 
@@ -49,8 +39,6 @@ h2 {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  margin: auto;
-  margin-bottom: 20px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -124,4 +112,14 @@ h2 {
     height: fit-content;
     margin-bottom: 10px;
   }
+}
+
+.sr-only {
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0px;
+  overflow: hidden;
+  position: absolute;
+  left: -1000px;
 }

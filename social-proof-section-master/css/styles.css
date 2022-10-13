@@ -1,3 +1,5 @@
+@import url(import.css);
+
 * {
   box-sizing: border-box;
 }
@@ -25,7 +27,7 @@ body {
 
 .container {
   max-width: 1110px;
-  margin: 20px;
+  margin: 0 20px 10px;
 }
 
 .bg-top {
@@ -123,7 +125,7 @@ section.one > * {
 
 .testimony {
   width: 340px;
-  height: 200px;
+  height: fit-content;
   background-color: var(--very-dark-magenta);
   color: var(--white);
   font-weight: 500;
@@ -240,4 +242,13 @@ section.one > * {
     margin: auto;
     margin-top: 20px;
   }
+}
+
+address {
+  font-style: normal;
+}
+
+.author {
+  font-size: inherit;
+  margin: unset;
 }

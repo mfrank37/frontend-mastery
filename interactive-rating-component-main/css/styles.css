@@ -13,10 +13,9 @@
   --White: hsl(0, 0%, 100%);
   --LightGrey: hsl(217, 12%, 63%);
   --MediumGrey: hsl(216, 12%, 54%);
-  --HardGrey: #363f48;
+  --HardGrey: hsl(210, 14%, 20%);
   --DarkBlue: hsl(213, 19%, 18%);
   --VeryDarkBlue: hsl(216, 12%, 8%);
-
 }
 
 body {
@@ -31,13 +30,11 @@ body {
 }
 
 .rating-state, .thank-you-state {
-  background: linear-gradient(var(--DarkBlue), hsl(213, 19%, 12%));
-  width: 375px;
+  background: hsl(213, 19%, 12%);
+  width: 400px;
   display: flex;
   flex-flow: column nowrap;
-  margin: 100px auto 50px auto;
-  margin-top: 50px;
-  padding: 25px;
+  padding: 30px;
   border-radius: 30px;
   line-height: 27px;
 }
@@ -59,13 +56,14 @@ button {
 
 .btn.submit {
   background-color: var(--Orange);
-  height: 40px;
   color: var(--White);
   font-family: 'Overpass';
+  font-size: 16px;
   font-weight: 700;
   border: none;
   border-radius: 20px;
   letter-spacing: 2px;
+  padding: 11px 0 9px;
 }
 
 .btn.submit:hover {

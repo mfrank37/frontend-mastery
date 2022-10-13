@@ -2,68 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="author" content="Frank Mungeri">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FAQ Accordion Card, implementation by Frank Mungeri.">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <title>Frontend Mentor | FAQ Accordion Card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frank Mungeri | FAQ Accordion Card</title>
 </head>
 <body>
   <main>
     <div class="bg">
-      <div class="illustration">
-        <div class="box"></div>
+      <div class="illustration" role="img" aria-label="Illustration Woman online.">
+        <div class="box" role="img" aria-label="box"></div>
       </div>
     </div>
-    <div class="qas">
+    <!--
+      Using article and heading rather than <details> & <summary> to get more SEO and hierarchy
+      Could: use aria-expanded=`true || false` for more accessibility in this case.
+    -->
+    <article class="qas">
       <h1>FAQ</h1>
       <div class="list">
-        <div class="qa">
+        <section class="qa">
           <input type="checkbox" id="qa1">
-          <label for="qa1">How many team members can I invite?<i></i></label>
+          <h2><label for="qa1">How many team members can I invite?<i aria-label="expand/collapse"></i></label></h2>
           <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
             team members for the Premium plan.</p>
             <hr />
-        </div>
-        <div class="qa">
-          <input type="checkbox" id="qa2">
-          <label for="qa2">What is the maximum file upload size?<i></i></label>
+        </section>
+        <section class="qa">
+          <input type="checkbox" id="qa2" checked>
+          <h2><label for="qa2">What is the maximum file upload size?<i aria-label="expand/collapse"></i></label></h2>
           <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
           <hr />
-        </div>
-        <div class="qa">
+        </section>
+        <section class="qa">
           <input type="checkbox" id="qa3">
-          <label for="qa3">How do I reset my password?<i></i></label>
+          <h2><label for="qa3">How do I reset my password?<i aria-label="expand/collapse"></i></label></h2>
           <p>Click “Forgot password” from the login page or “Change password” from your profile page.
             A reset link will be emailed to you.</p>
             <hr />
-        </div>
-        <div class="qa">
+        </section>
+        <section class="qa">
           <input type="checkbox" id="qa4">
-          <label for="qa4">Can I cancel my subscription?<i></i></label>
+          <h2><label for="qa4">Can I cancel my subscription?<i aria-label="expand/collapse"></i></label></h2>
           <p>Yes! Send us a message and we'll process your request no questions asked.</p>
           <hr />
-        </div>
-        <div class="qa">
+        </section>
+        <section class="qa">
           <input type="checkbox" id="qa5">
-          <label for="qa5">Do you provide additional support?<i></i></label>
+          <h2><label for="qa5">Do you provide additional support?<i aria-label="expand/collapse"></i></label></h2>
           <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
           <hr />
-        </div>
+        </section>
       </div>
-    </div>
+    </article>
   </main>
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://www.frontendmentor.io/profile/mfrank37">@mfrank37</a>.
-    </div>
-  </footer>
 </body>
 </html>

@@ -1,3 +1,5 @@
+@import url(import.css);
+
 * {
   box-sizing: border-box;
   font-family: 'Outfit', 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
@@ -14,18 +16,14 @@
 
 body {
   margin: 0;
-  margin-top: 20px;
   padding: 0;
   font-size: 18px;
   background-color: var(--dddark-blue);
   color: var(--soft-blue);
-}
-
-.h1 {
-  color: var(--ddark-blue);
-  text-align: center;
-  font-size: 15px;
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .card {
@@ -78,17 +76,17 @@ body {
   opacity: 1;
 }
 
-h2, .user-name, .overlay, .icon-view {
+h1, .user-name, .overlay, .icon-view {
   transition: linear 0.2s;
 }
 
-h2 {
+h1 {
   color: var(--white);
   font-weight: 600;
   font-size: 20px;
 }
 
-h2:hover {
+h1:hover {
   color: var(--cyan);
   cursor: pointer;
 }

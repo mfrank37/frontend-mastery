@@ -74,7 +74,7 @@ header > p {
 }
 
 main {
-  max-height: calc(100vh - 85px - 150px);
+  max-height: calc(100vh - 120px - 150px);
   min-height: 250px;
   overflow: auto;
 }
@@ -84,7 +84,7 @@ ul {
   list-style-image: radial-gradient(var(--red), var(--pink));
 }
 
-@media (max-height: 500px) {
+@media (max-height: 520px) {
   h1 {
     margin-top: 20px;
     margin-bottom: 20px;

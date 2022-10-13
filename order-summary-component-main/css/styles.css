@@ -1,3 +1,5 @@
+@import url(import.css);
+
 * {
   font-family: 'Red Hat Display', 'Courier New', Courier, monospace;
   box-sizing: border-box;
@@ -11,6 +13,7 @@
   --dark-blue: hsl(223, 47%, 23%);
   --white: hsl(0, 100%, 100%);
 }
+
 html {
   background-color: var(--pale-blue);
 }
@@ -25,11 +28,9 @@ body {
   background-size: contain;
   margin: 0;
   padding: 0;
-  position: absolute;
   width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -38,6 +39,7 @@ body {
   max-width: 450px;
   background-color: var(--white);
   border-radius: 15px;
+  box-shadow: 0px 10px 20px hsla(223, 47%, 23%, 0.301);
 }
 
 .card .details {
@@ -51,7 +53,7 @@ button {
   border-radius: 15px;
   border: unset;
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   display: block;
@@ -116,16 +118,17 @@ button.cancel:hover {
   color: #766CEA;
 }
 
-h1, b {
+h1, strong {
   font-weight: 900;
   color: var(--dark-blue);
 }
 
 h1 {
+  margin-top: 35px;
   font-size: 28px;
 }
 
-b {
+strong {
   font-size: 16px;
 }
 

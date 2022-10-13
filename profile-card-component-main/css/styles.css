@@ -1,3 +1,5 @@
+@import url(import.css);
+
 * {
   box-sizing: border-box;
   font-family: 'Kumbh Sans', sans-serif;
@@ -12,6 +14,11 @@
   --dark-gray: hsl(0, 0%, 59%);
 }
 
+hr {
+  border: none;
+  border-bottom: 1px solid var(--dark-gray);
+}
+
 body {
   background-color: var(--dark-cyan);
   min-height: 100vh;
@@ -24,8 +31,14 @@ body {
   align-items: center;
 }
 
-h1 {
-  color: var(--dark-cyan);
+.sr-only {
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0px;
+  overflow: hidden;
+  position: absolute;
+  left: -1000px;
 }
 
 .bg-top {
@@ -55,12 +68,11 @@ h1 {
 
 .card {
   background: white;
-  margin-bottom: 20px;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   max-width: fit-content;
-  box-shadow: 0 30px 50px 0 hsl(185, 75%, 19%);
+  box-shadow: 0 30px 50px 0 hsla(185, 75%, 19%, 0.5);
 }
 
 .user-bg {
@@ -80,11 +92,17 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .user h2 span {
   font-weight: 400;
+}
+
+address {
+  font-size: 16px;
+  font-style: normal;
+  margin: 5px 0;
 }
 
 .user p {
@@ -106,6 +124,3 @@ h2 {
   font-size: 12px;
 }
 
-footer, a, a:visited {
-  color: white;
-}

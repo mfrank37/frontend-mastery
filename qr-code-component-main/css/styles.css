@@ -1,3 +1,5 @@
+@import url(import.css);
+
 * {
   box-sizing: border-box;
   font-family: 'Outfit', Verdana, Geneva, Tahoma, sans-serif;
@@ -17,13 +19,13 @@ body {
   text-align: center;
   font-size: 15px;
   color: var(--grayish-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 h1 {
-  color: var(--light-gray);
-}
-
-h2 {
   color: var(--dark-blue);
   font-size: 20px;
 }
@@ -39,8 +41,4 @@ h2 {
 img {
   width: 100%;
   border-radius: 10px;
-}
-
-footer {
-  margin-top: 30px;
 }

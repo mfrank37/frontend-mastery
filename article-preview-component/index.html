@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Frank Mungeri">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Article preview component, implementation by Frank Mungeri.">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Article preview component</title>
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frank Mungeri | Article preview component</title>
 </head>
 <body>
   <main>
-    <div class="bg"></div>
-    <div class="content">
+    <figure aria-label="Drawers">
+      <img src="images/drawers.jpg" alt="Drawers">
+    </figure>
+    <article class="content">
       <div class="text">
         <h1>
           Shift the overall look and feel by adding these wonderful 
@@ -26,35 +26,29 @@
           to help you make any room feel complete.
         </p>
       </div>
-      <div class="author">
+      <address>
         <img src="images/avatar-michelle.jpg" alt="Avatar Michelle">
         <div class="details">
-          <b>Michelle Appleton</b>
-          <span>28 Jun 2020</span>
+          <strong class="author">Michelle Appleton</strong>
+          <time datetime="2020-06-28">28 Jun 2020</time>
         </div>
-        <button class="share">
+        <div class="share" role="button" tabindex="0" aria-label="Share">
           <i></i>
-          <div class="tooltip">
+          <div class="tooltip" role="tooltip">
             <div>
               SHARE
-              <a class="fb" href="https://facebook.com"></a>
-              <a class="tw" href="https://twitter.com"></a>
-              <a class="pi" href="https://pinterest.com"></a>
+              <a class="fb" href="https://facebook.com" aria-label="Share to Facebook" title="Share to Facebook"></a>
+              <a class="tw" href="https://twitter.com" aria-label="Share to Twitter" title="Share to Twitter"></a>
+              <a class="pi" href="https://pinterest.com" aria-label="Share to Pinterest" title="Share to Pinterest"></a>
             </div>
             <svg width="21" height="11" viewBox="0 0 21 11" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.5 10.5L0 0H21L10.5 10.5Z" fill="#48556A"/>
             </svg>
           </div>
-        </button>
-      </div>
-    </div>
+        </div>
+      </address>
+    </article>
   </main>
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://www.frontendmentor.io/profile/mfrank37">@mfrank37</a>.
-    </div>
-  </footer>
   <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
