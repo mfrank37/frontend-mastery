@@ -256,3 +256,14 @@ address {
   font-size: inherit;
   margin: unset;
 }
+
+.sr-only {
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  left: -1000px;
+}
