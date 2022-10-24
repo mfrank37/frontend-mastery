@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: 'League Spartan', sans-serif;
   font-weight: 400;
   font-size: 15px;
   margin: 0;
@@ -62,23 +62,24 @@ body {
 
 .hero h1 {
   max-width: 400px;
-  font-size: 48px;
+  font-size: 50px;
+  margin-bottom: 20px;
   color: var(--very-dark-magenta);
 }
 
-section.one {
+div.one {
   display: flex;
   align-items: stretch;
 }
 
-section.one > * {
+div.one > * {
   width: 50%;
 }
 
 .ratings {
   display: flex;
   flex-flow: column;
-  justify-content: space-evenly;
+  justify-content: center;
   padding-left: 1px;
 }
 
@@ -96,6 +97,8 @@ section.one > * {
   padding: 0 20px 0 20px;
   border-radius: 5px;
   font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .rate > div {
@@ -119,18 +122,18 @@ section.one > * {
 .testimonies {
   display: flex;
   flex-flow: row wrap;
-  margin-top: 25px;
+  margin-top: 40px;
   padding-top: 5px;
 }
 
 .testimony {
-  width: 340px;
+  width: 330px;
   height: fit-content;
   background-color: var(--very-dark-magenta);
   color: var(--white);
   font-weight: 500;
   border-radius: 5px;
-  padding: 25px;
+  padding: 35px;
   margin: 10px;
 }
 
@@ -158,6 +161,7 @@ section.one > * {
 }
 
 .user span {
+  margin-top: 5px;
   color: var(--soft-pink);
 }
 
@@ -216,11 +220,11 @@ section.one > * {
 }
 
 @media only screen and (max-width: 720px) {
-  section.one {
+  div.one {
     display: block;
   }
 
-  section.one > * {
+  div.one > * {
     width: 100%;
   }
 
