@@ -45,7 +45,7 @@ main > * {
 
 .qas {
   height: 100%;
-  padding: 50px 0;
+  padding: 50px 0 50px 30px;
   margin-right: 100px;
   overflow: hidden;
 }
@@ -56,7 +56,7 @@ main > * {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 30px;
 }
 
 .qa p {
@@ -64,7 +64,7 @@ h1 {
   width: 1px;
   margin: -1px;
   overflow: hidden;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 h2 {
@@ -72,7 +72,7 @@ h2 {
 }
 
 .qa label {
-  font-size: 15px;
+  font-size: 14px;
   display: flex;
   margin: 12px 0;
   padding-right: 15px;
@@ -84,7 +84,7 @@ h2 {
 
 hr {
   border: none;
-  border-bottom: 1px solid var(--very-dark-desaturated-blue);
+  border-bottom: 1px solid hsla(238, 29%, 16%, .2);
 }
 
 label i {
@@ -178,6 +178,10 @@ input:checked + h2>label i {
   .qa label {
     font-size: 15px;
     padding: unset;
+  }
+
+  .qa p {
+    font-size: 14px;
   }
 
   .qas .list {
