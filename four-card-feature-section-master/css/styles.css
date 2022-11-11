@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
+  font-size: 15px;
+  font-family: 'Poppins', 'Roboto', Verdana, sans-serif;
+  color: var(--very-dark-blue);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--very-light-gray);
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 500px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  display: flex;
+  flex-direction: column;
+}
+
+header span:not(.hero) {
+  font-weight: 200;
+}
+
+header p, article > p {
+  color: var(--grayish-blue);
+  font-size: 1rem;
+}
+
+main {
+  display: grid;
+  align-items: center;
+  grid-template-areas: 
+    "left centerup right"
+    "left centerdown right";
+  gap: 30px;
+}
+
+article {
+  max-width: 400px;
+  border-radius: 6px 6px 10px 10px;
+  padding: 40px;
+  border-top: 5px solid;
+  background-color: white;
+  box-shadow: 0px 10px 25px 5px hsla(234, 12%, 34%, 0.1),
+              0px 15px 15px 0px hsla(234, 12%, 34%, 0.05);
+  width: 1fr;
+}
+
+article h2 {
+  margin-top: 0;
+}
+
+article img {
+  display: block;
+  margin-top: 40px;
+  margin-left: auto;
+}
+
+article.karma {
+  border-top-color: var(--orange);
+  grid-area: centerdown;
+}
+
+article.calculator {
+  border-top-color: var(--blue);
+  grid-area: right;
+}
+
+article.supervisor {
+  border-top-color: var(--cyan);
+  grid-area: left;
+}
+
+article.team-builder {
+  border-top-color: var(--red);
+  grid-area: centerup;
+}
+
+
+@media only screen and (max-width: 1300px) {
+  body {
+    padding: 50px 20px;
+  }
+
+  header {
+    width: fit-content;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p, article p {
+    font-size: 1.1rem;
+  }
+
+  main {
+    display: block;
+  }
+
+  article {
+    margin: 20px 0;
+  }
+}
