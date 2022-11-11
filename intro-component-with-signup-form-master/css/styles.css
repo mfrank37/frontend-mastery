@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+
+  --box-shadow: 0 0.5rem 1px 0 hsla(249, 10%, 26%, 0.2);
+
+  font-size: 16px;
+  font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background: var(--red);
+}
+
+body {
+  margin: 0 50px;
+  min-height: 100vh;
+  background: url(../images/bg-intro-desktop.png);
+  background-repeat: repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+header {
+  max-width: 500px;
+}
+
+main {
+  width: 600px;
+}
+
+header h1 {
+  font-size: 3.1rem;
+}
+
+header p {
+  color: whitesmoke;
+}
+
+main form {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #FFF;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+main > p:first-child {
+  background-color: var(--blue);
+  padding: 1rem 5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+input, button {
+  display: block;
+  height: 3.5rem;
+  font-weight: bold;
+  margin-top: 1.4rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Poppins', 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input:nth-child(1) {
+  margin-top: 0;
+}
+
+input:focus, input:active {
+  outline: unset;
+  border: 1px solid var(--dark-blue);
+}
+
+input {
+  color: var(--dark-blue);
+  border: 1px solid hsla(246, 25%, 77%, 0.5);
+  padding: 0 3rem 0 2rem;
+}
+
+input::placeholder {
+  opacity: 0.8;
+}
+
+
+input.error {
+  display: block;
+  color: var(--red);
+  border-color: var(--red);
+}
+
+input.error + p.error {
+  margin: 0.3rem 0 0 0;
+  color: var(--red);
+  text-align: right;
+  font-size: 0.8rem;
+  font-style: italic;
+  position: relative;
+}
+
+input + p.error > .error-icon {
+  content: url(../images/icon-error.svg);
+  position: absolute;
+  top: -2.7rem;
+  right: 1rem;
+}
+
+button, button:active {
+  border: unset;
+  background-color: var(--green);
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  border-bottom: 3px solid hsla(249, 10%, 26%, 0.2);
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+form p {
+  font-size: 0.8rem;
+  color: var(--grayish-blue);
+  text-align: center;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    display: block;
+    margin: 24px;
+    background: url(../images/bg-intro-mobile.png);
+    background-repeat: repeat;
+    padding-top: 50px;
+  }
+
+  header {
+    text-align: center;
+    max-width: fit-content;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    width: auto;
+    margin: 40px 0;
+  }
+
+  main > p:first-child {
+    padding: 1rem 3rem;
+  }
+
+  main form {
+    padding: 20px;
+  }
+}
