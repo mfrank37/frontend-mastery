@@ -59,7 +59,7 @@ function validateNames(element) {
 
 function validateForm() {
   const email = emailEl.value;
-  const emailRegex = /[a-z1-9]+@[a-z1-9]+\.[a-z]{2,}/i;
+  const emailRegex = /^[a-z][a-z1-9]+@[a-z1-9]+\.[a-z]{2,}$/i;
   const password = passwordEl.value;
   const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/g;
   validateNames(firstNameEl);
