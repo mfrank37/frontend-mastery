@@ -1,0 +1,197 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+
+  background: var(--violet);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: url(../images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  padding: 50px;
+  max-width: 1440px;
+}
+
+.logo {
+  grid-column: 1/-1;
+  margin-bottom: 50px;
+}
+
+.logo > img {
+  height: 40px;
+}
+
+.right {
+  align-self: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 600px;
+  padding: 0 40px 0 40px;
+}
+
+.social {
+  margin-left: auto;
+  display: flex;
+}
+
+.social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 .4rem;
+  padding: 0.5rem;
+  border: 1px solid white;
+  text-align: center;
+  transition: all linear 0.2s;
+}
+
+.social a:hover {
+  border: 1px solid var(--soft-magenta);
+}
+
+.social a i {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: white;
+  transition: all linear 0.2s;
+}
+
+.social a i:hover, .social a:hover i {
+  background: var(--soft-magenta);
+}
+
+.facebook {
+  -webkit-mask: url(../images/facebook-f.svg) no-repeat center;
+  -moz-mask: url(../images/facebook-f.svg) no-repeat center;
+  -o-mask: url(../images/facebook-f.svg) no-repeat center;
+  mask: url(../images/facebook-f.svg) no-repeat center;
+}
+
+.twitter {
+  -webkit-mask: url(../images/twitter.svg) no-repeat center;
+  -moz-mask: url(../images/twitter.svg) no-repeat center;
+  -o-mask: url(../images/twitter.svg) no-repeat center;
+  mask: url(../images/twitter.svg) no-repeat center;
+}
+
+.instagram {
+  -webkit-mask: url(../images/instagram.svg) no-repeat center;
+  -moz-mask: url(../images/instagram.svg) no-repeat center;
+  -o-mask: url(../images/instagram.svg) no-repeat center;
+  mask: url(../images/instagram.svg) no-repeat center;}
+
+.hero {
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.hero p {
+  font-size: 1.12rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.illustration {
+  margin-left: 10px;
+}
+
+button {
+  height: 3rem;
+  width: 10rem;
+  border-radius: 1.5rem;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  color: var(--violet);
+  margin: 1rem 0;
+  cursor: pointer;
+  box-shadow: 0 0.3rem 0.5rem 0.3rem hsla(257, 40%, 29%, 0.555);
+  transition: 0.2s linear;
+}
+
+button:hover {
+  color: white;
+  background: var(--soft-magenta);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: block;
+    background: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+  }
+
+  main {
+    display: block;
+    padding: 35px;
+  }
+
+  .logo > img {
+    height: 2rem;
+  }
+
+  .right {
+    padding: 0;
+  }
+
+  .hero {
+    padding: 0;
+    text-align: center;
+    margin: 4rem 0;
+  }
+
+  .illustration {
+    margin: 0;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  button {
+    height: 2.4rem;
+    font-size: 0.8rem;
+  }
+
+  .social {
+    margin: 0 auto;
+  }
+
+  .social a {
+    width: 30px;
+    height: 30px;
+  }
+}
