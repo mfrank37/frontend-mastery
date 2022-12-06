@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/mfrank37/frontend-mastery/tree/master/huddle-landing-page-with-single-introductory-section-master)
-- Live Site URL: [Github Pages](https://mfrank37.github.io/frontend-mastery/huddle-landing-page-with-single-introductory-section-master)
+- Solution URL: [Github](https://github.com/mfrank37/frontend-mastery/tree/master/ping-coming-soon-page-master)
+- Live Site URL: [Github Pages](https://mfrank37.github.io/frontend-mastery/ping-coming-soon-page-master)
 
 ## My process
 
