@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 70%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+  --transition: 0.2s linear;
+
+  font-size: 20px;
+  font-family: 'Libre Franklin', Arial, Helvetica, sans-serif;
+  color: var(--very-dark-blue);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+body > * {
+  max-width: 640px;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0;
+}
+
+h1 span {
+  font-weight: 400;
+  color: rgb(145, 145, 145);
+}
+
+.graphic {
+  margin: 4rem 0;
+}
+
+input, button {
+  height: 2.8rem;
+  border-radius: 1.5rem;
+  font: inherit;
+  font-size: 0.8rem;
+  border: 0;
+  outline: none;
+}
+
+input[type="email"] {
+  width: 100%;
+  border: 1px solid var(--pale-blue);
+  padding: 0rem 1.5rem;
+}
+
+input::placeholder {
+  color: var(--pale-blue);
+}
+
+button {
+  background-color: var(--blue);
+  color: white;
+  margin-right: 0;
+  box-shadow: 0 0.3rem 0.5rem 0 hsla(223, 87%, 63%, 0.3);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  filter: brightness(125%);
+}
+
+form {
+  display: grid;
+  grid-template-columns: minmax(10rem, 2fr) minmax(8rem, 1fr);
+  gap: 0.8rem;
+  margin: 2.2rem 0;
+}
+
+form div.error [type=email] {
+  border: 1px solid var(--light-red);
+}
+
+form div.error {
+  position: relative;
+}
+
+form > div:nth-of-type(1) > p {
+  display: none;
+}
+
+form > .error:nth-of-type(1) > p {
+  display: block;
+  position: absolute;
+  margin: 0.3rem 0;
+  font-size: 0.6rem;
+  font-style: italic;
+  text-align: left;
+  padding: 0 1.5rem;
+  color: var(--light-red);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1.4rem;
+}
+
+.social a {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 1px solid var(--pale-blue);
+  padding: 0.35rem;
+  transition: var(--transition);
+}
+
+.social a:hover {
+  background: var(--blue);
+}
+
+.social a i {
+  display: block;
+  background: var(--blue);
+  width: 100%;
+  height: 100%;
+  transition: var(--transition);
+}
+
+.social a i:hover, .social a:hover i {
+  background-color: white;
+}
+
+.facebook {
+  -webkit-mask: url(../images/facebook-f.svg) no-repeat center;
+  -moz-mask: url(../images/facebook-f.svg) no-repeat center;
+  -o-mask: url(../images/facebook-f.svg) no-repeat center;
+  mask: url(../images/facebook-f.svg) no-repeat center;
+}
+
+.twitter {
+  -webkit-mask: url(../images/twitter.svg) no-repeat center;
+  -moz-mask: url(../images/twitter.svg) no-repeat center;
+  -o-mask: url(../images/twitter.svg) no-repeat center;
+  mask: url(../images/twitter.svg) no-repeat center;
+}
+
+.instagram {
+  -webkit-mask: url(../images/instagram.svg) no-repeat center;
+  -moz-mask: url(../images/instagram.svg) no-repeat center;
+  -o-mask: url(../images/instagram.svg) no-repeat center;
+  mask: url(../images/instagram.svg) no-repeat center;
+}
+
+footer {
+  font-size: 0.68rem;
+  color: var(--gray);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  body {
+    padding-bottom: 1rem;
+  }
+
+  :root {
+    font-size: 16px;
+  }
+
+  .logo, .header, form {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .logo {
+    height: 1rem;
+    margin: 2.5rem 0 2rem;
+  }
+
+  .header p {
+    font-size: 0.78rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+  }
+
+  input, button {
+    height: 2.4rem;
+  }
+
+  input[type="email"] {
+    padding: 0 2rem;
+  }
+
+  .social {
+    gap: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  form > .error:nth-of-type(1) > p {
+    position: relative;
+    text-align: center;
+    padding: 0;
+  }
+}
