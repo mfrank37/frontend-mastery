@@ -3,7 +3,7 @@ const button = form.querySelector('form button');
 const emailEl = form.querySelector('input');
 const errorEl = form.querySelector('p');
 
-const emailRegex = /^[a-z][a-z1-9]+@[a-z1-9]+\.[a-z]{2,}$/i;
+const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 button.addEventListener('click', (e) => {
   e.preventDefault();
