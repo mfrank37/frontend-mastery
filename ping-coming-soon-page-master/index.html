@@ -11,20 +11,20 @@
   <title>Frank Mungeri | Ping coming soon page</title>
 </head>
 <body>
+  <header class="logo">
+    <img src="images/logo.svg" alt>
+    <h1><span>We are launching</span> soon!</h1>
+  </header>
   <main>
-    <div class="logo">
-      <img src="images/logo.svg" alt>
-    </div>
-    <div class="header">
-      <h1><span>We are launching</span> soon!</h1>
-      <p>Subscribe and get notified</p>
-    </div>
     <form method="POST">
-      <div>
-        <input type="email" required placeholder="Your email address...">
-        <p></p>
-      </div>
-      <button type="submit">Notify Me</button>
+      <label for="email">Subscribe and get notified</label>
+      <section>
+        <div>
+          <input type="email" id="email" required placeholder="Your email address...">
+          <p></p>
+        </div>
+        <button type="submit">Notify Me</button>
+      </section>
     </form>
     <div class="graphic">
       <img src="images/illustration-dashboard.png" alt="Illustration dashboard">
