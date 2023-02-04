@@ -11,6 +11,7 @@
   --darker-green: #000a03;
   --grey: #C7C9C8;
   --green: #48D967;
+  --green2: hsl(133, 66%, 45%);
   --red: #CF1B30;
   --pink: #FFA8B2;
 }
@@ -56,12 +57,27 @@ li {
 }
 
 h1 {
-  margin: 50px 0 20px 0;
+  margin: 30px 0 0 0;
+  padding: 20px 0;
+}
+
+h1:hover {
+  background-color: var(--green);
+  color: var(--darker-green);
 }
 
 footer {
   background: #000;
   padding: 20px;
+}
+
+footer:hover {
+  background-color: var(--grey);
+}
+
+footer:hover * {
+  color: var(--darker-green);
+  text-decoration-color: var(--darker-green);
 }
 
 header {
@@ -84,6 +100,89 @@ ul {
   list-style-image: radial-gradient(var(--red), var(--pink));
 }
 
+html, body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+h1, footer {
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+aside {
+  position: absolute;
+  top: 0;
+  right: -350px;
+  width: 300px;
+  height: 100%;
+  padding: 0 1rem;
+  background-color: var(--green2);
+  color: var(--darker-green);
+  transition: all 0.5s ease-in-out;
+}
+
+aside.open {
+  right: 0px;
+}
+
+aside ul {
+  padding-left: 25px;
+}
+
+aside h2 {
+  margin: 1rem 0;
+}
+
+.toggle-message {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  border-bottom-left-radius: 50%;
+  overflow: hidden;
+}
+
+svg.icon {
+  fill: var(--green2);
+  background: var(--darker-green);
+  width: 40px;
+  height: 40px;
+  display: block;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+
+.icon.bulb {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 20px;
+}
+
+.icon.bulb:hover {
+  fill: var(--darker-green);
+  background-color: var(--green2);
+}
+
+.icon:not(.bulb) {
+  position: relative;
+  left: -45px;
+  top: 10px;
+  padding: 5px;
+  fill: var(--darker-green);
+  background-color: var(--green2);
+}
+
+.icon:not(.bulb):hover {
+  fill: var(--green2);
+  background: var(--darker-green);
+  border: 2px solid var(--green2);
+}
+
 @media (max-height: 520px) {
   h1 {
     margin-top: 20px;
@@ -92,5 +191,23 @@ ul {
 
   header {
     margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon.bulb {
+    width: 50px;
+    height: 50px;
+    top: 5px;
+    right: 5px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  body {
+    padding: 5px;
   }
 }
