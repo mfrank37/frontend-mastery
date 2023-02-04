@@ -4,13 +4,13 @@ const filesToCache = [
   './index.html',
   './link-icon.svg',
   './main.css',
+  './main.js',
   './manifest.json',
   './logo-192x192.png',
   './logo-512x512.png',
   './screenshot.png',
   'https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap'
 ];
-
 
 const installHandler = function(e) {
   e.waitUntil(
