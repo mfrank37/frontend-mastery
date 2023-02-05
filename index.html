@@ -11,7 +11,19 @@
     <link rel="manifest" href="manifest.json" />
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js');
+        navigator.serviceWorker.register('./sw.js', {scope:'/', })
+          .then( reg => {
+            reg.onupdatefound = () => {
+              const updatingWorker = reg.installing;
+              updatingWorker.onstatechange = () => {
+                if(updatingWorker.state === "activated") {
+                  location.reload();
+                }
+              }
+            }
+          }).catch(err => {
+            console.log('SW registration failed: ', err);
+          });
       }
     </script>
     <title>Frontend Mastery</title>

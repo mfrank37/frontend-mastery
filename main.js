@@ -21,7 +21,6 @@ const defaultNotification = {
 const sendNotification = async (notificationConfig = defaultNotification) => {
   const {title, options} = notificationConfig;
   const reg = await navigator.serviceWorker.getRegistration();
-  console.log(reg);
   const permission = await Notification.requestPermission();
   if (permission !== 'granted') {
     alert('You need to allow push notifications');
